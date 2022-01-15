@@ -20,7 +20,11 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.post('/', (req, res) => {
+app.get('/create', (req, res) => {
+    res.render('create')
+})
+
+app.post('/create', (req, res) => {
     console.log(req.body)
     const { email, password } = req.body
     // return res.render('index', { email, password })
